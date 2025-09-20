@@ -1121,6 +1121,38 @@
     }
     
     
+    /* Back Button Styles */
+    .back-to-main-btn {
+      position: fixed;
+      top: 20px;
+      left: 20px;
+      z-index: 1000;
+      background: rgba(67,160,71,0.9);
+      color: #fff;
+      border: none;
+      padding: 12px 20px;
+      border-radius: 25px;
+      font-size: 1em;
+      cursor: pointer;
+      font-weight: 600;
+      box-shadow: 0 4px 12px rgba(67,160,71,0.3);
+      transition: all 0.3s ease;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      backdrop-filter: blur(10px);
+    }
+    
+    .back-to-main-btn:hover {
+      background: rgba(67,160,71,1);
+      transform: translateY(-2px);
+      box-shadow: 0 6px 20px rgba(67,160,71,0.4);
+    }
+    
+    .back-to-main-btn:active {
+      transform: translateY(0);
+    }
+
     /* Responsive Design */
     @media (max-width: 768px) {
       .section-title {
@@ -1160,6 +1192,900 @@
       
       .dashboard-actions {
         justify-content: center;
+      }
+      
+      .back-to-main-btn {
+        top: 15px;
+        left: 15px;
+        padding: 10px 16px;
+        font-size: 0.9em;
+      }
+    }
+    
+    /* Navigation Page Styles */
+    .navigation-page {
+      min-height: 100vh;
+      background: #f8fff8;
+    }
+    
+    .nav-header {
+      background: white;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+    
+    .nav-container {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem 2rem;
+    }
+    
+    .nav-logo h2 {
+      color: #43a047;
+      margin: 0;
+      font-size: 1.5em;
+    }
+    
+    .nav-menu {
+      display: flex;
+      gap: 2rem;
+    }
+    
+    .nav-link {
+      text-decoration: none;
+      color: #666;
+      font-weight: 500;
+      padding: 0.5rem 1rem;
+      border-radius: 8px;
+      transition: all 0.3s ease;
+    }
+    
+    .nav-link:hover,
+    .nav-link.active {
+      color: #43a047;
+      background: #f0f8f0;
+    }
+    
+    .nav-actions {
+      display: flex;
+      gap: 1rem;
+      align-items: center;
+    }
+    
+    .nav-signin-btn {
+      background: transparent;
+      color: #43a047;
+      border: 2px solid #43a047;
+      padding: 0.5rem 1rem;
+      border-radius: 8px;
+      cursor: pointer;
+      font-weight: 600;
+      transition: all 0.3s ease;
+    }
+    
+    .nav-signin-btn:hover {
+      background: #43a047;
+      color: white;
+    }
+    
+    .nav-signup-btn {
+      background: linear-gradient(90deg, #43a047, #66bb6a);
+      color: white;
+      border: none;
+      padding: 0.5rem 1rem;
+      border-radius: 8px;
+      cursor: pointer;
+      font-weight: 600;
+      transition: all 0.3s ease;
+    }
+    
+    .nav-signup-btn:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 4px 12px rgba(67,160,71,0.3);
+    }
+    
+    .nav-content {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 2rem;
+    }
+    
+    .nav-section {
+      display: none;
+    }
+    
+    .nav-section.active {
+      display: block;
+    }
+    
+    .hero-section {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 3rem;
+      align-items: center;
+      margin-bottom: 4rem;
+    }
+    
+    .hero-content h1 {
+      font-size: 3em;
+      color: #333;
+      margin-bottom: 1rem;
+    }
+    
+    .hero-subtitle {
+      font-size: 1.2em;
+      color: #666;
+      margin-bottom: 1rem;
+      font-weight: 500;
+    }
+    
+    .hero-description {
+      font-size: 1.1em;
+      color: #555;
+      margin-bottom: 2rem;
+      line-height: 1.6;
+    }
+    
+    .hero-stats {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 2rem;
+      margin-bottom: 2rem;
+    }
+    
+    .stat-item {
+      text-align: center;
+      padding: 1rem;
+      background: white;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    }
+    
+    .stat-item h3 {
+      font-size: 2em;
+      color: #43a047;
+      margin-bottom: 0.5rem;
+    }
+    
+    .stat-item p {
+      color: #666;
+      margin: 0;
+    }
+    
+    .hero-actions {
+      display: flex;
+      gap: 1rem;
+    }
+    
+    .hero-image img {
+      width: 100%;
+      height: 400px;
+      object-fit: cover;
+      border-radius: 12px;
+    }
+    
+    .section-content {
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+    
+    .section-content h2 {
+      font-size: 2.5em;
+      color: #333;
+      text-align: center;
+      margin-bottom: 3rem;
+    }
+    
+    .features-grid,
+    .benefits-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 2rem;
+      margin-bottom: 3rem;
+    }
+    
+    .feature-card,
+    .benefit-card {
+      background: white;
+      padding: 2rem;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      text-align: center;
+      transition: transform 0.3s ease;
+    }
+    
+    .feature-card:hover,
+    .benefit-card:hover {
+      transform: translateY(-5px);
+    }
+    
+    .feature-icon,
+    .benefit-icon {
+      font-size: 3em;
+      margin-bottom: 1rem;
+    }
+    
+    .feature-card h3,
+    .benefit-card h3 {
+      color: #43a047;
+      margin-bottom: 1rem;
+    }
+    
+    .cta-section {
+      text-align: center;
+      padding: 3rem;
+      background: linear-gradient(135deg, #43a047, #66bb6a);
+      color: white;
+      border-radius: 12px;
+    }
+    
+    .cta-section h3 {
+      font-size: 2em;
+      margin-bottom: 1rem;
+    }
+    
+    .cta-btn {
+      padding: 1rem 2rem;
+      border: none;
+      border-radius: 8px;
+      font-size: 1.1em;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      margin: 0.5rem;
+    }
+    
+    .cta-btn.primary {
+      background: white;
+      color: #43a047;
+    }
+    
+    .cta-btn.secondary {
+      background: transparent;
+      color: white;
+      border: 2px solid white;
+    }
+    
+    .cta-btn:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+    }
+    
+    .about-content {
+      display: grid;
+      grid-template-columns: 2fr 1fr;
+      gap: 3rem;
+      align-items: start;
+    }
+    
+    .about-text h3 {
+      color: #43a047;
+      margin-top: 2rem;
+      margin-bottom: 1rem;
+    }
+    
+    .about-text ul {
+      padding-left: 1.5rem;
+    }
+    
+    .about-text li {
+      margin-bottom: 0.5rem;
+    }
+    
+    .about-image img {
+      width: 100%;
+      height: 300px;
+      object-fit: cover;
+      border-radius: 12px;
+    }
+    
+    .contact-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 3rem;
+    }
+    
+    .contact-item {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      margin-bottom: 2rem;
+    }
+    
+    .contact-icon {
+      font-size: 2em;
+      width: 60px;
+      height: 60px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: #f0f8f0;
+      border-radius: 50%;
+    }
+    
+    .contact-form {
+      background: white;
+      padding: 2rem;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    }
+    
+    .contact-form input,
+    .contact-form textarea {
+      width: 100%;
+      padding: 1rem;
+      border: 2px solid #e1e5e9;
+      border-radius: 8px;
+      margin-bottom: 1rem;
+      font-size: 1em;
+    }
+    
+    .contact-form input:focus,
+    .contact-form textarea:focus {
+      outline: none;
+      border-color: #43a047;
+    }
+    
+    .help-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 2rem;
+      margin-bottom: 3rem;
+    }
+    
+    .help-category {
+      background: white;
+      padding: 2rem;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    }
+    
+    .help-category h3 {
+      color: #43a047;
+      margin-bottom: 1rem;
+    }
+    
+    .help-category ul {
+      list-style: none;
+      padding: 0;
+    }
+    
+    .help-category li {
+      margin-bottom: 0.5rem;
+    }
+    
+    .help-category a {
+      color: #666;
+      text-decoration: none;
+      transition: color 0.3s ease;
+    }
+    
+    .help-category a:hover {
+      color: #43a047;
+    }
+    
+    .support-contact {
+      text-align: center;
+      padding: 2rem;
+      background: #f8fff8;
+      border-radius: 12px;
+    }
+    
+    /* Home Page Additional Sections */
+    .community-impact-section,
+    .market-coverage-section,
+    .partnership-section,
+    .roadmap-section,
+    .final-cta-section {
+      padding: 4rem 0;
+      background: white;
+      margin: 2rem 0;
+      border-radius: 12px;
+    }
+    
+    .community-impact-section {
+      background: #f8fff8;
+    }
+    
+    .community-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 2rem;
+      margin-top: 2rem;
+    }
+    
+    .community-card {
+      background: white;
+      padding: 2rem;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      text-align: center;
+      transition: transform 0.3s ease;
+      border-left: 4px solid #43a047;
+    }
+    
+    .community-card:hover {
+      transform: translateY(-5px);
+    }
+    
+    .community-icon {
+      font-size: 3em;
+      margin-bottom: 1rem;
+    }
+    
+    .community-card h3 {
+      color: #43a047;
+      margin-bottom: 1rem;
+      font-size: 1.3em;
+    }
+    
+    .community-image {
+      width: 100%;
+      height: 200px;
+      margin-bottom: 1.5rem;
+      border-radius: 8px;
+      overflow: hidden;
+    }
+    
+    .community-image img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.3s ease;
+    }
+    
+    .community-card:hover .community-image img {
+      transform: scale(1.05);
+    }
+    
+    .coverage-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 2rem;
+      margin-top: 2rem;
+    }
+    
+    .district-card {
+      background: white;
+      padding: 2rem;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      text-align: center;
+      transition: transform 0.3s ease;
+    }
+    
+    .district-card:hover {
+      transform: translateY(-5px);
+    }
+    
+    .district-card h3 {
+      color: #43a047;
+      margin-bottom: 1rem;
+      font-size: 1.4em;
+    }
+    
+    .district-stats {
+      display: flex;
+      justify-content: space-around;
+      margin: 1rem 0;
+    }
+    
+    .district-stats .stat {
+      background: #f0f8f0;
+      color: #43a047;
+      padding: 0.5rem 1rem;
+      border-radius: 20px;
+      font-weight: 600;
+      font-size: 0.9em;
+    }
+    
+    .district-image {
+      width: 100%;
+      height: 200px;
+      margin-bottom: 1.5rem;
+      border-radius: 8px;
+      overflow: hidden;
+    }
+    
+    .district-image img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.3s ease;
+    }
+    
+    .district-card:hover .district-image img {
+      transform: scale(1.05);
+    }
+    
+    .expansion-cta {
+      text-align: center;
+      margin-top: 2rem;
+      padding: 2rem;
+      background: #f8fff8;
+      border-radius: 12px;
+    }
+    
+    .partnership-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 2rem;
+      margin-top: 2rem;
+    }
+    
+    .partner-card {
+      background: white;
+      padding: 2rem;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      text-align: center;
+      transition: transform 0.3s ease;
+    }
+    
+    .partner-card:hover {
+      transform: translateY(-5px);
+    }
+    
+    .partner-logo {
+      font-size: 3em;
+      margin-bottom: 1rem;
+    }
+    
+    .partner-card h3 {
+      color: #43a047;
+      margin-bottom: 1rem;
+      font-size: 1.3em;
+    }
+    
+    .partner-image {
+      width: 100%;
+      height: 200px;
+      margin-bottom: 1.5rem;
+      border-radius: 8px;
+      overflow: hidden;
+    }
+    
+    .partner-image img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.3s ease;
+    }
+    
+    .partner-card:hover .partner-image img {
+      transform: scale(1.05);
+    }
+    
+    .roadmap-timeline {
+      margin-top: 2rem;
+      position: relative;
+    }
+    
+    .roadmap-timeline::before {
+      content: '';
+      position: absolute;
+      left: 50%;
+      top: 0;
+      bottom: 0;
+      width: 2px;
+      background: linear-gradient(180deg, #43a047, #66bb6a);
+      transform: translateX(-50%);
+    }
+    
+    .timeline-item {
+      display: flex;
+      align-items: center;
+      margin-bottom: 3rem;
+      position: relative;
+    }
+    
+    .timeline-item:nth-child(odd) {
+      flex-direction: row;
+    }
+    
+    .timeline-item:nth-child(even) {
+      flex-direction: row-reverse;
+    }
+    
+    .timeline-date {
+      background: linear-gradient(135deg, #43a047, #66bb6a);
+      color: white;
+      padding: 1rem 1.5rem;
+      border-radius: 25px;
+      font-weight: bold;
+      font-size: 0.9em;
+      min-width: 120px;
+      text-align: center;
+      position: relative;
+      z-index: 2;
+    }
+    
+    .timeline-content {
+      background: white;
+      padding: 2rem;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      margin: 0 2rem;
+      flex: 1;
+      max-width: 400px;
+    }
+    
+    .timeline-content h3 {
+      color: #43a047;
+      margin-bottom: 1rem;
+      font-size: 1.3em;
+    }
+    
+    .timeline-content p {
+      color: #666;
+      line-height: 1.6;
+    }
+    
+    .steps-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 2rem;
+      margin-top: 2rem;
+    }
+    
+    .step-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 1.5rem;
+      padding: 2rem;
+      background: white;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      transition: transform 0.3s ease;
+    }
+    
+    .step-item:hover {
+      transform: translateY(-5px);
+    }
+    
+    .step-number {
+      background: linear-gradient(135deg, #43a047, #66bb6a);
+      color: white;
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.5em;
+      font-weight: bold;
+      flex-shrink: 0;
+    }
+    
+    .step-content h3 {
+      color: #43a047;
+      margin-bottom: 1rem;
+      font-size: 1.3em;
+    }
+    
+    .step-content p {
+      color: #666;
+      line-height: 1.6;
+    }
+    
+    .stories-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+      gap: 2rem;
+      margin-top: 2rem;
+    }
+    
+    .story-card {
+      display: flex;
+      gap: 1.5rem;
+      padding: 2rem;
+      background: white;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      transition: transform 0.3s ease;
+    }
+    
+    .story-card:hover {
+      transform: translateY(-5px);
+    }
+    
+    .story-image {
+      flex-shrink: 0;
+    }
+    
+    .story-image img {
+      width: 120px;
+      height: 120px;
+      object-fit: cover;
+      border-radius: 12px;
+    }
+    
+    .story-content h4 {
+      color: #43a047;
+      margin-bottom: 1rem;
+      font-size: 1.2em;
+    }
+    
+    .story-content p {
+      color: #666;
+      line-height: 1.6;
+      margin-bottom: 1rem;
+      font-style: italic;
+    }
+    
+    .story-location {
+      color: #888;
+      font-size: 0.9em;
+    }
+    
+    .impact-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 2rem;
+      margin-top: 2rem;
+    }
+    
+    .impact-item {
+      text-align: center;
+      padding: 2rem;
+      background: linear-gradient(135deg, #43a047, #66bb6a);
+      color: white;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(67,160,71,0.3);
+    }
+    
+    .impact-icon {
+      font-size: 3em;
+      margin-bottom: 1rem;
+    }
+    
+    .impact-item h3 {
+      font-size: 2.5em;
+      margin-bottom: 0.5rem;
+      font-weight: bold;
+    }
+    
+    .impact-item p {
+      font-size: 1.1em;
+      opacity: 0.9;
+    }
+    
+    .final-cta-section {
+      background: linear-gradient(135deg, #43a047, #66bb6a);
+      color: white;
+      text-align: center;
+    }
+    
+    .final-cta-section h2 {
+      color: white;
+      font-size: 2.5em;
+      margin-bottom: 1rem;
+    }
+    
+    .final-cta-section p {
+      font-size: 1.2em;
+      margin-bottom: 2rem;
+      opacity: 0.9;
+    }
+    
+    .cta-buttons {
+      display: flex;
+      gap: 1rem;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+    
+    .cta-btn.large {
+      padding: 1.2rem 2.5rem;
+      font-size: 1.2em;
+    }
+    
+    /* Mobile Responsive */
+    @media (max-width: 768px) {
+      .nav-container {
+        flex-direction: column;
+        gap: 1rem;
+        padding: 1rem;
+      }
+      
+      .nav-menu {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 1rem;
+      }
+      
+      .hero-section {
+        grid-template-columns: 1fr;
+        text-align: center;
+      }
+      
+      .hero-content h1 {
+        font-size: 2em;
+      }
+      
+      .hero-stats {
+        grid-template-columns: 1fr;
+      }
+      
+      .hero-actions {
+        flex-direction: column;
+        align-items: center;
+      }
+      
+      .about-content {
+        grid-template-columns: 1fr;
+      }
+      
+      .contact-grid {
+        grid-template-columns: 1fr;
+      }
+      
+      .features-grid,
+      .benefits-grid {
+        grid-template-columns: 1fr;
+      }
+      
+      .steps-container {
+        grid-template-columns: 1fr;
+      }
+      
+      .step-item {
+        flex-direction: column;
+        text-align: center;
+      }
+      
+      .stories-grid {
+        grid-template-columns: 1fr;
+      }
+      
+      .story-card {
+        flex-direction: column;
+        text-align: center;
+      }
+      
+      .story-image img {
+        width: 100%;
+        height: 200px;
+      }
+      
+      .impact-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+      
+      .cta-buttons {
+        flex-direction: column;
+        align-items: center;
+      }
+      
+      .community-grid,
+      .coverage-grid,
+      .partnership-grid {
+        grid-template-columns: 1fr;
+      }
+      
+      .roadmap-timeline::before {
+        left: 20px;
+      }
+      
+      .timeline-item {
+        flex-direction: column !important;
+        align-items: flex-start;
+        padding-left: 3rem;
+      }
+      
+      .timeline-date {
+        margin-bottom: 1rem;
+        align-self: flex-start;
+      }
+      
+      .timeline-content {
+        margin: 0;
+        max-width: 100%;
       }
     }
     
@@ -1489,7 +2415,7 @@
          Eliminating middlemen, reducing waste, ensuring freshness
        </p>
        <div style="display:flex;gap:15px;justify-content:center;margin-top:30px;">
-         <button onclick="closeModal()" style="background:linear-gradient(90deg,#43a047,#66bb6a);color:#fff;border:none;padding:14px 32px;border-radius:10px;font-size:1.1em;cursor:pointer;font-weight:bold;box-shadow:0 4px 12px rgba(67,160,71,0.3);transition:all 0.3s ease;">Explore Platform</button>
+         <button onclick="openNavigationPage()" style="background:linear-gradient(90deg,#43a047,#66bb6a);color:#fff;border:none;padding:14px 32px;border-radius:10px;font-size:1.1em;cursor:pointer;font-weight:bold;box-shadow:0 4px 12px rgba(67,160,71,0.3);transition:all 0.3s ease;">Explore Platform</button>
          <button onclick="scrollToProblem()" style="background:rgba(255,255,255,0.2);color:#fff;border:2px solid rgba(255,255,255,0.3);padding:14px 32px;border-radius:10px;font-size:1.1em;cursor:pointer;font-weight:bold;backdrop-filter:blur(10px);transition:all 0.3s ease;">Learn More</button>
        </div>
      </div>
@@ -1497,6 +2423,10 @@
 
   <!-- Main Content Sections -->
   <div id="mainContent" style="display:none;">
+    <!-- Back Button -->
+    <button onclick="goBackToModal()" class="back-to-main-btn">
+      ← Back to Main
+    </button>
     
     <!-- Problem Section -->
     <section id="problemSection" class="content-section">
@@ -1822,6 +2752,427 @@
 
   </div>
 
+  <!-- Navigation Page -->
+  <div id="navigationPage" class="navigation-page hidden">
+    <!-- Navigation Header -->
+    <nav class="nav-header">
+      <div class="nav-container">
+        <div class="nav-logo">
+          <h2>🌾 AgriConnect</h2>
+        </div>
+        <div class="nav-menu">
+          <a href="#home" onclick="showNavSection('home')" class="nav-link active">Home</a>
+          <a href="#farmers" onclick="showNavSection('farmers')" class="nav-link">Farmers</a>
+          <a href="#consumers" onclick="showNavSection('consumers')" class="nav-link">Consumers</a>
+          <a href="#about" onclick="showNavSection('about')" class="nav-link">About Us</a>
+          <a href="#contact" onclick="showNavSection('contact')" class="nav-link">Contact</a>
+          <a href="#help" onclick="showNavSection('help')" class="nav-link">Help</a>
+        </div>
+        <div class="nav-actions">
+          <button onclick="signIn()" class="nav-signin-btn">Sign In</button>
+          <button onclick="signUp()" class="nav-signup-btn">Sign Up</button>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Navigation Content -->
+    <div class="nav-content">
+      <!-- Home Section -->
+      <section id="nav-home" class="nav-section active">
+        <div class="hero-section">
+          <div class="hero-content">
+            <h1>Welcome to AgriConnect</h1>
+            <p class="hero-subtitle">Connecting farmers directly with consumers for fresh, fair, and sustainable agriculture</p>
+            <p class="hero-description">We're revolutionizing the agricultural supply chain by eliminating middlemen, ensuring farmers get fair prices for their produce while consumers enjoy fresh, affordable food delivered directly from farm to table.</p>
+            
+            <div class="hero-stats">
+              <div class="stat-item">
+                <h3>500+</h3>
+                <p>Active Farmers</p>
+              </div>
+              <div class="stat-item">
+                <h3>10,000+</h3>
+                <p>Happy Consumers</p>
+              </div>
+              <div class="stat-item">
+                <h3>₹50L+</h3>
+                <p>Farmer Income</p>
+              </div>
+            </div>
+            
+            <div class="hero-actions">
+              <button onclick="signUp()" class="cta-btn primary">Join as Farmer</button>
+              <button onclick="signUp()" class="cta-btn secondary">Shop Fresh Produce</button>
+            </div>
+          </div>
+          <div class="hero-image">
+            <img src="https://img.freepik.com/premium-photo/realistic-photo-sunny-fields-farmers-are-working-high-brightness-photography_123827-123827.jpg?w=600&h=400&fit=crop" alt="Farmers working in sunny fields">
+          </div>
+        </div>
+
+        <!-- Community Impact Section -->
+        <div class="community-impact-section">
+          <div class="section-content">
+            <h2>Building Stronger Communities</h2>
+            <div class="community-grid">
+              <div class="community-card">
+                <div class="community-image">
+                  <img src="https://images.unsplash.com/photo-1544027993-37dbfe43562a?w=300&h=200&fit=crop" alt="Children in rural school">
+                </div>
+                <h3>Empowering Rural Families</h3>
+                <p>Over 500 farming families across Andhra Pradesh have increased their household income by 60-80%, enabling better education for their children and improved living standards.</p>
+              </div>
+              <div class="community-card">
+                <div class="community-image">
+                  <img src="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=300&h=200&fit=crop" alt="Village development and infrastructure">
+                </div>
+                <h3>Strengthening Local Economy</h3>
+                <p>Our platform has generated ₹50+ crores in direct farmer income, keeping money within local communities and supporting regional economic growth.</p>
+              </div>
+              <div class="community-card">
+                <div class="community-image">
+                  <img src="https://images.unsplash.com/photo-1586771107445-d3f8884a7ba7?w=300&h=200&fit=crop" alt="Green technology and solar panels">
+                </div>
+                <h3>Promoting Sustainable Practices</h3>
+                <p>We encourage and support organic farming methods, helping farmers transition to sustainable agriculture while maintaining productivity and profitability.</p>
+              </div>
+              <div class="community-card">
+                <div class="community-image">
+                  <img src="https://images.unsplash.com/photo-1529156069898-49953e39b3ac?w=300&h=200&fit=crop" alt="Community meeting and discussion">
+                </div>
+                <h3>Creating Lasting Relationships</h3>
+                <p>Farmers and consumers build direct relationships, fostering trust, understanding, and mutual support that goes beyond just buying and selling.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Market Coverage Section -->
+        <div class="market-coverage-section">
+          <div class="section-content">
+            <h2>Expanding Across Andhra Pradesh</h2>
+            <div class="coverage-grid">
+              <div class="district-card">
+                <div class="district-image">
+                  <img src="https://images.unsplash.com/photo-1500937386664-56d1dfef3854?w=300&h=200&fit=crop" alt="Guntur chilli fields">
+                </div>
+                <h3>Guntur District</h3>
+                <div class="district-stats">
+                  <span class="stat">150+ Farmers</span>
+                  <span class="stat">3,000+ Consumers</span>
+                </div>
+                <p>Leading in chilli and cotton production with direct-to-consumer sales</p>
+              </div>
+              <div class="district-card">
+                <div class="district-image">
+                  <img src="https://images.unsplash.com/photo-1554224155-6726b3ff858f?w=300&h=200&fit=crop" alt="Vijayawada urban agriculture">
+                </div>
+                <h3>Vijayawada</h3>
+                <div class="district-stats">
+                  <span class="stat">120+ Farmers</span>
+                  <span class="stat">4,500+ Consumers</span>
+                </div>
+                <p>Urban hub connecting rural farmers with city consumers</p>
+              </div>
+              <div class="district-card">
+                <div class="district-image">
+                  <img src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=300&h=200&fit=crop" alt="Nellore rice fields">
+                </div>
+                <h3>Nellore</h3>
+                <div class="district-stats">
+                  <span class="stat">80+ Farmers</span>
+                  <span class="stat">2,200+ Consumers</span>
+                </div>
+                <p>Rice and sugarcane farmers benefiting from direct sales</p>
+              </div>
+              <div class="district-card">
+                <div class="district-image">
+                  <img src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d?w=300&h=200&fit=crop" alt="Kadapa mango orchards">
+                </div>
+                <h3>Kadapa</h3>
+                <div class="district-stats">
+                  <span class="stat">60+ Farmers</span>
+                  <span class="stat">1,800+ Consumers</span>
+                </div>
+                <p>Mango and groundnut farmers expanding their market reach</p>
+              </div>
+            </div>
+            <div class="expansion-cta">
+              <p>We're rapidly expanding to cover all 13 districts of Andhra Pradesh</p>
+              <button onclick="showNavSection('contact')" class="cta-btn secondary">Request Your District</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Partnership & Support Section -->
+        <div class="partnership-section">
+          <div class="section-content">
+            <h2>Government & Industry Partnerships</h2>
+            <div class="partnership-grid">
+              <div class="partner-card">
+                <div class="partner-image">
+                  <img src="https://images.unsplash.com/photo-1582213782179-e0d53f98f2ca?w=300&h=200&fit=crop" alt="Government building and officials">
+                </div>
+                <h3>Andhra Pradesh Government</h3>
+                <p>Official partnership with AP Agriculture Department for farmer empowerment and rural development initiatives</p>
+              </div>
+              <div class="partner-card">
+                <div class="partner-image">
+                  <img src="https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?w=300&h=200&fit=crop" alt="Banking and financial services">
+                </div>
+                <h3>Banking Partners</h3>
+                <p>Collaboration with SBI, HDFC, and regional banks for easy credit access and digital payments</p>
+              </div>
+              <div class="partner-card">
+                <div class="partner-image">
+                  <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=300&h=200&fit=crop" alt="Logistics and delivery trucks">
+                </div>
+                <h3>Logistics Partners</h3>
+                <p>Strategic partnerships with Blue Dart, Delhivery, and local logistics providers for efficient delivery</p>
+              </div>
+              <div class="partner-card">
+                <div class="partner-image">
+                  <img src="https://images.unsplash.com/photo-1504608524841-42fe6f032b4b?w=300&h=200&fit=crop" alt="Agricultural research and education">
+                </div>
+                <h3>Agricultural Universities</h3>
+                <p>Research collaboration with ANGRAU and other agricultural institutions for farming innovation</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Future Roadmap Section -->
+        <div class="roadmap-section">
+          <div class="section-content">
+            <h2>Our Vision for 2025</h2>
+            <div class="roadmap-timeline">
+              <div class="timeline-item">
+                <div class="timeline-date">Q1 2025</div>
+                <div class="timeline-content">
+                  <h3>Pan-India Expansion</h3>
+                  <p>Launch in 5 major states: Telangana, Karnataka, Tamil Nadu, Maharashtra, and Odisha</p>
+                </div>
+              </div>
+              <div class="timeline-item">
+                <div class="timeline-date">Q2 2025</div>
+                <div class="timeline-content">
+                  <h3>AI Crop Advisory</h3>
+                  <p>Introduce AI-powered crop disease detection and farming advisory services for farmers</p>
+                </div>
+              </div>
+              <div class="timeline-item">
+                <div class="timeline-date">Q3 2025</div>
+                <div class="timeline-content">
+                  <h3>Export Platform</h3>
+                  <p>Enable farmers to export their produce directly to international markets through our platform</p>
+                </div>
+              </div>
+              <div class="timeline-item">
+                <div class="timeline-date">Q4 2025</div>
+                <div class="timeline-content">
+                  <h3>Carbon Credit Trading</h3>
+                  <p>Launch carbon credit trading for sustainable farming practices and environmental impact</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- CTA Section -->
+        <div class="final-cta-section">
+          <div class="section-content">
+            <h2>Ready to Transform Agriculture?</h2>
+            <p>Join thousands of farmers and consumers who are already benefiting from direct farm-to-table connections</p>
+            <div class="cta-buttons">
+              <button onclick="signUp()" class="cta-btn primary large">Start Your Journey</button>
+              <button onclick="showNavSection('about')" class="cta-btn secondary large">Learn More</button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Farmers Section -->
+      <section id="nav-farmers" class="nav-section">
+        <div class="section-content">
+          <h2>For Farmers</h2>
+          <div class="features-grid">
+            <div class="feature-card">
+              <div class="feature-icon">📱</div>
+              <h3>Easy Listing</h3>
+              <p>List your produce in minutes with our simple mobile interface</p>
+            </div>
+            <div class="feature-card">
+              <div class="feature-icon">💰</div>
+              <h3>Fair Pricing</h3>
+              <p>Set your own prices and earn 60-80% more than traditional markets</p>
+            </div>
+            <div class="feature-card">
+              <div class="feature-icon">🚚</div>
+              <h3>Direct Delivery</h3>
+              <p>Deliver directly to consumers and build lasting relationships</p>
+            </div>
+            <div class="feature-card">
+              <div class="feature-icon">📊</div>
+              <h3>Analytics</h3>
+              <p>Track your sales and understand market trends</p>
+            </div>
+          </div>
+          <div class="cta-section">
+            <h3>Ready to Start Selling?</h3>
+            <p>Join thousands of farmers already earning more with AgriConnect</p>
+            <button onclick="signUp()" class="cta-btn primary">Register as Farmer</button>
+          </div>
+        </div>
+      </section>
+
+      <!-- Consumers Section -->
+      <section id="nav-consumers" class="nav-section">
+        <div class="section-content">
+          <h2>For Consumers</h2>
+          <div class="benefits-grid">
+            <div class="benefit-card">
+              <div class="benefit-icon">🥬</div>
+              <h3>Fresh Produce</h3>
+              <p>Get the freshest fruits and vegetables directly from local farms</p>
+            </div>
+            <div class="benefit-card">
+              <div class="benefit-icon">💵</div>
+              <h3>Better Prices</h3>
+              <p>Save 20-30% compared to traditional retail prices</p>
+            </div>
+            <div class="benefit-card">
+              <div class="benefit-icon">🌱</div>
+              <h3>Organic Options</h3>
+              <p>Access to organic and sustainably grown produce</p>
+            </div>
+            <div class="benefit-card">
+              <div class="benefit-icon">🏠</div>
+              <h3>Home Delivery</h3>
+              <p>Convenient delivery right to your doorstep</p>
+            </div>
+          </div>
+          <div class="cta-section">
+            <h3>Start Shopping Fresh</h3>
+            <p>Browse our marketplace and discover local farmers in your area</p>
+            <button onclick="signUp()" class="cta-btn primary">Start Shopping</button>
+          </div>
+        </div>
+      </section>
+
+      <!-- About Us Section -->
+      <section id="nav-about" class="nav-section">
+        <div class="section-content">
+          <h2>About AgriConnect</h2>
+          <div class="about-content">
+            <div class="about-text">
+              <h3>Our Mission</h3>
+              <p>We're revolutionizing agriculture by connecting farmers directly with consumers, eliminating middlemen, and ensuring fair prices for everyone involved.</p>
+              
+              <h3>Our Story</h3>
+              <p>Founded in 2024, AgriConnect started as a solution to the growing disconnect between farmers and consumers. We saw farmers struggling with low prices while consumers paid high prices for produce that had lost its freshness through long supply chains.</p>
+              
+              <h3>Our Impact</h3>
+              <ul>
+                <li>Increased farmer income by 60-80%</li>
+                <li>Reduced consumer prices by 20-30%</li>
+                <li>Decreased food waste by 30%</li>
+                <li>Connected 500+ farmers with 10,000+ consumers</li>
+              </ul>
+            </div>
+            <div class="about-image">
+              <img src="https://images.unsplash.com/photo-1574323347407-f5e1ad6d020b?w=500&h=400&fit=crop" alt="Farmers working">
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Contact Section -->
+      <section id="nav-contact" class="nav-section">
+        <div class="section-content">
+          <h2>Contact Us</h2>
+          <div class="contact-grid">
+            <div class="contact-info">
+              <h3>Get in Touch</h3>
+              <div class="contact-item">
+                <div class="contact-icon">📧</div>
+                <div>
+                  <h4>Email</h4>
+                  <p>info@agriconnect.com</p>
+                </div>
+              </div>
+              <div class="contact-item">
+                <div class="contact-icon">📱</div>
+                <div>
+                  <h4>Phone</h4>
+                  <p>+91 98765 43210</p>
+                </div>
+              </div>
+              <div class="contact-item">
+                <div class="contact-icon">📍</div>
+                <div>
+                  <h4>Address</h4>
+                  <p>Amaravati, Andhra Pradesh, India</p>
+                </div>
+              </div>
+            </div>
+            <div class="contact-form">
+              <h3>Send us a Message</h3>
+              <form>
+                <input type="text" placeholder="Your Name" required>
+                <input type="email" placeholder="Your Email" required>
+                <input type="text" placeholder="Subject" required>
+                <textarea placeholder="Your Message" rows="5" required></textarea>
+                <button type="submit" class="cta-btn primary">Send Message</button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Help Section -->
+      <section id="nav-help" class="nav-section">
+        <div class="section-content">
+          <h2>Help & Support</h2>
+          <div class="help-grid">
+            <div class="help-category">
+              <h3>For Farmers</h3>
+              <ul>
+                <li><a href="#">How to list your produce</a></li>
+                <li><a href="#">Setting competitive prices</a></li>
+                <li><a href="#">Managing orders</a></li>
+                <li><a href="#">Payment processing</a></li>
+              </ul>
+            </div>
+            <div class="help-category">
+              <h3>For Consumers</h3>
+              <ul>
+                <li><a href="#">How to place orders</a></li>
+                <li><a href="#">Payment methods</a></li>
+                <li><a href="#">Delivery tracking</a></li>
+                <li><a href="#">Returns & refunds</a></li>
+              </ul>
+            </div>
+            <div class="help-category">
+              <h3>General</h3>
+              <ul>
+                <li><a href="#">Account setup</a></li>
+                <li><a href="#">Privacy policy</a></li>
+                <li><a href="#">Terms of service</a></li>
+                <li><a href="#">FAQ</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="support-contact">
+            <h3>Still need help?</h3>
+            <p>Our support team is here to help you 24/7</p>
+            <button onclick="openLiveChat()" class="cta-btn primary">Live Chat</button>
+            <button onclick="openFAQ()" class="cta-btn secondary">View FAQ</button>
+          </div>
+        </div>
+      </section>
+    </div>
+  </div>
+
   <!-- Farmer Dashboard -->
   <div id="farmerDashboard" class="dashboard hidden">
     <div class="dashboard-header">
@@ -1925,6 +3276,47 @@
       document.getElementById('modalBg').style.display = 'none';
       document.getElementById('mainContent').style.display = 'block';
       document.getElementById('problemSection').scrollIntoView({ behavior: 'smooth' });
+    }
+    
+    function goBackToModal() {
+      document.getElementById('mainContent').style.display = 'none';
+      document.getElementById('navigationPage').classList.add('hidden');
+      document.getElementById('modalBg').style.display = 'flex';
+      // Scroll to top of the page
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+    
+    function openNavigationPage() {
+      document.getElementById('modalBg').style.display = 'none';
+      document.getElementById('mainContent').style.display = 'none';
+      document.getElementById('navigationPage').classList.remove('hidden');
+      // Scroll to top of the page
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+    
+    function showNavSection(sectionName) {
+      // Hide all sections
+      const sections = document.querySelectorAll('.nav-section');
+      sections.forEach(section => section.classList.remove('active'));
+      
+      // Remove active class from all nav links
+      const navLinks = document.querySelectorAll('.nav-link');
+      navLinks.forEach(link => link.classList.remove('active'));
+      
+      // Show selected section
+      const targetSection = document.getElementById('nav-' + sectionName);
+      if (targetSection) {
+        targetSection.classList.add('active');
+      }
+      
+      // Add active class to clicked nav link
+      const clickedLink = document.querySelector(`[onclick="showNavSection('${sectionName}')"]`);
+      if (clickedLink) {
+        clickedLink.classList.add('active');
+      }
+      
+      // Scroll to top of content
+      window.scrollTo({ top: 0, behavior: 'smooth' });
     }
     
     function signIn() {
