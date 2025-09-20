@@ -1,0 +1,56 @@
+/* AgriConnect MVP styles */
+:root{
+    --bg:#fffdf7;
+    --muted:#666;
+    --green:#43A047;
+    --orange:#FF9800;
+    --blue:#1976D2;
+    --card:#ffffff;
+    --round:14px;
+  }
+  *{box-sizing:border-box;font-family:Inter, system-ui, -apple-system, 'Noto Sans', sans-serif}
+  body{margin:0;background:linear-gradient(180deg,var(--bg),#f0fff0);color:#222;min-height:100vh;display:flex;flex-direction:column;}
+  .topbar{display:flex;justify-content:space-between;align-items:center;padding:14px 18px;background:transparent}
+  .logo{font-weight:700;font-size:18px}
+  .role-badge{font-size:14px;color:var(--muted)}
+  main{flex:1;padding:18px;max-width:900px;margin:0 auto;width:100%}
+  .card{background:var(--card);border-radius:var(--round);padding:18px;box-shadow:0 6px 18px rgba(10,10,10,0.06);margin-bottom:14px}
+  .center{text-align:center}
+  .brand{color:var(--green)}
+  .muted{color:var(--muted)}
+  .small{font-size:13px}
+  #bg-video {
+      position: fixed;
+      right: 0;
+      bottom: 0;
+      min-width: 100%;
+      min-height: 100%;
+      width: auto;
+      height: auto;
+      z-index: -1; /* Push video behind content */
+      object-fit: cover; /* Crop video if needed */
+  }
+  .role-row{display:flex;gap:12px;justify-content:center;margin:14px 0}
+  .role-btn{padding:16px 26px;border-radius:12px;border:0;font-weight:700;cursor:pointer;box-shadow:0 6px 14px rgba(0,0,0,0.06)}
+  .role-btn.farmer{background:linear-gradient(90deg,var(--green),#66bb6a);color:white}
+  .role-btn.buyer{background:linear-gradient(90deg,var(--blue),#42a5f5);color:white}
+  .hidden{display:none}
+  .form-row{margin:10px 0;display:flex;flex-direction:column;gap:6px}
+  input[type="text"], input[type="number"]{padding:10px;border-radius:8px;border:1px solid #e6e6e6}
+  .primary{background:linear-gradient(90deg,var(--green),#66bb6a);color:white;border:0;padding:10px 14px;border-radius:8px;cursor:pointer}
+  .secondary{background:#fff;border:1px solid #ddd;padding:8px 12px;border-radius:8px;cursor:pointer}
+  .tertiary{background:transparent;border:0;color:var(--muted);cursor:pointer}
+  .card-row{display:flex;gap:12px;flex-wrap:wrap}
+  .card.small{flex:1;min-width:180px}
+  .panel{background:#fbfff6;padding:14px;border-radius:12px;margin:10px 0}
+  .samples{display:flex;gap:8px;flex-wrap:wrap}
+  .sample{padding:8px 12px;border-radius:8px;border:1px dashed #ddd;background:white;cursor:pointer}
+  .result{padding:12px;border-radius:8px;margin-top:12px}
+  .listings{display:flex;flex-direction:column;gap:12px}
+  .listing-card{display:flex;justify-content:space-between;align-items:center;padding:12px;border-radius:10px;border:1px solid #f0f0f0;background:white}
+  .listing-info{max-width:70%}
+  .chip{padding:6px 8px;border-radius:999px;border:1px solid #eee;background:white;cursor:pointer;margin-right:6px}
+  .cats{display:flex;gap:6px}
+  .footer{text-align:center;padding:12px;color:var(--muted);font-size:13px}
+  .toast{position:fixed;left:50%;transform:translateX(-50%);bottom:26px;background:#222;color:#fff;padding:10px 14px;border-radius:8px}
+  
